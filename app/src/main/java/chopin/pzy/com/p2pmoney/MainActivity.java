@@ -2,13 +2,11 @@ package chopin.pzy.com.p2pmoney;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -89,25 +87,25 @@ public class MainActivity extends AppCompatActivity {
                 ivTouzi.setImageResource(R.drawable.bid03);
                 tvTouzi.setTextColor(getResources().getColor(R.color.home_back_selected));
                 break;
-            case R.id.ll_more:
-                Log.i(TAG,"33333");
-                if(moreFragment==null){
-                    moreFragment=new MoreFragment();
-                    ft.add(R.id.main_content,moreFragment);
-                }
-                ivMore.setImageResource(R.drawable.bid05);
-                tvMore.setTextColor(getResources().getColor(R.color.home_back_selected));
-               ft.show(moreFragment);
-                break;
             case R.id.ll_me:
                 Log.i(TAG,"44444");
                 if(meFragment==null){
                     meFragment=new MeFragment();
                     ft.add(R.id.main_content,meFragment);
                 }
-                ivMe.setImageResource(R.drawable.bid07);
+                ivMe.setImageResource(R.drawable.bid05);
                 tvMe.setTextColor(getResources().getColor(R.color.home_back_selected));
                 ft.show(meFragment);
+                break;
+            case R.id.ll_more:
+                Log.i(TAG,"33333");
+                if(moreFragment==null){
+                    moreFragment=new MoreFragment();
+                    ft.add(R.id.main_content,moreFragment);
+                }
+                ivMore.setImageResource(R.drawable.bid07);
+                tvMore.setTextColor(getResources().getColor(R.color.home_back_selected));
+                ft.show(moreFragment);
                 break;
         }
         ft.commit();
