@@ -18,6 +18,7 @@ import chopin.pzy.com.p2pmoney.fragment.HomeFragment;
 import chopin.pzy.com.p2pmoney.fragment.MeFragment;
 import chopin.pzy.com.p2pmoney.fragment.MoreFragment;
 import chopin.pzy.com.p2pmoney.fragment.TouziFragment;
+import chopin.pzy.com.p2pmoney.utils.UIUtil;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG=MainActivity.class.getSimpleName();
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 ft.show(homeFragment);
                 ivHome.setImageResource(R.drawable.bid01);
-                tvHome.setTextColor(getResources().getColor(R.color.home_back_selected));
+                tvHome.setTextColor(UIUtil.getColor(R.color.home_back_selected));
                 break;
             case R.id.ll_touzi:
                 Log.i(TAG,"22222");
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 ft.show(touziFragment);
                 ivTouzi.setImageResource(R.drawable.bid03);
-                tvTouzi.setTextColor(getResources().getColor(R.color.home_back_selected));
+                tvTouzi.setTextColor(UIUtil.getColor(R.color.home_back_selected));
                 break;
             case R.id.ll_me:
                 Log.i(TAG,"44444");
@@ -94,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     ft.add(R.id.main_content,meFragment);
                 }
                 ivMe.setImageResource(R.drawable.bid05);
-                tvMe.setTextColor(getResources().getColor(R.color.home_back_selected));
+                tvMe.setTextColor(UIUtil.getColor(R.color.home_back_selected));
                 ft.show(meFragment);
                 break;
             case R.id.ll_more:
@@ -104,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                     ft.add(R.id.main_content,moreFragment);
                 }
                 ivMore.setImageResource(R.drawable.bid07);
-                tvMore.setTextColor(getResources().getColor(R.color.home_back_selected));
+                tvMore.setTextColor(UIUtil.getColor(R.color.home_back_selected));
                 ft.show(moreFragment);
                 break;
         }
